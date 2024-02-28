@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('carousel_name')->nullable();
             $table->string('image_path');
             $table->string('description')->nullable();
-            $table->timestamps();
         });
 
         Schema::table('carousel_items', function (Blueprint $table) {

@@ -16,7 +16,6 @@ class CarouselItemsController extends Controller
         return CarouselItems::all();
     }
 
-
     /**
      * Store a newly created resource in storage.
      */
@@ -46,6 +45,10 @@ class CarouselItemsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $carouselItem = CarouselItems::findOrFail($id);
+
+        $carouselItem->delete();
+ 
+        return $carouselItem;
     }
 }
